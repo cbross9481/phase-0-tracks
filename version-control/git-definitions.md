@@ -18,3 +18,5 @@ When you try to merge commits from one branch to another but can't because the f
 
 Simply adding a line 17
 Big Change!!
+
+Making change
