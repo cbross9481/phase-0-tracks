@@ -1,0 +1,27 @@
+#glasses{
+	display:block;
+	position:absolute;
+	top:267px;
+	left:42px;
+}
+#hat{
+	display:block;
+	position:relative;
+	top:100px;
+	left:-20px;
+	
+}
+#octopus{
+	display:block;
+}
+#Full{
+	position:relative;
+	left:20px;
+	top:-100px;
+
+}
+h1{
+	position:relative;
+	color:blue;
+	left:65px;
+}
