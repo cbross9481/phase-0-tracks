@@ -1,9 +1,24 @@
-section #contact-info{
+#contact-info{
 	font-size:.8em;
 }
-#job{
+.job{
 	background-color:#e9e5dc;
 	padding:20px;
 	margin-top:5px;
 	margin-bottom:5px;
+	font-size:;
+}
+.featured{
+	font-size:.8em;
+}
+p:first-child {
+  color: lime;
+  background-color: black;
+  padding: 5px;
+}
+#TestSelection{
+	color:green;
+}
+#Test2{
+	color:blue;
 }
