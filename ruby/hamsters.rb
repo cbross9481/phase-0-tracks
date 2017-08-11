@@ -1,22 +1,31 @@
-puts "What is the name of the hamster?"
-name=gets.chomp
-puts "What is volume level on your hamster?"
-volume=gets.chomp
-volume=volume.to_i
-puts "What is the color of your hamster's fur?"
-fur=gets.chomp
-puts "Is your hamster a good candidate for adoption?"
-good=gets.chomp
-puts "What is the estimate age of your hamster?"
-age=gets.chomp
-if age==" "
-  age=nil
-  else
-  age=age.to_i 
+puts "What is the hamster's name?"
+name = gets.chomp
+puts "What is the volume level?"
+level = gets.chomp.to_i 
+puts "What is the fur color"
+color = gets.chomp
+puts "Is the hamster in good condition? (true or false)"
+good = gets.chompputs "What is the estimated age?"
+age = gets.chomp.to_i
+if age=="" 
+	age = nil
 end 
 
-puts "name:#{name}"
-puts "volume:#{volume}"
-puts "fur:#{fur}"
-puts "good:#{good}"
-puts "age:#{age}"
+puts "The hamster's name is #{name}. It is #{level} units of loud. It is#{age} years old. It has #{color} fur.Condition good: #{good}."
+
+				
+
+ 
+
+
+
+
+
+						
+						
+
+
+
+
+
+		

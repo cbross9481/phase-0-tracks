@@ -29,7 +29,7 @@ If new_arrival = Destination_X, say "Good Bye", decrease passenger count -1
 
 
 }
-Repeat for each new_arrival > destination floor X, assign new passenger by Arrival_(X+1) & assign new buttonY by Destination_(X+1)
+Repeat for each new_arrival > destination floor X, assign new passenger by Arrival_(X+1) & assign new buttonY by Destination_(X+1)
 
 Event 5
 If passenger count upon exiting > 0, say "Have a great day"
