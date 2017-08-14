@@ -16,7 +16,7 @@ p{
   position:relative;
   float:left;
   width:309px;
-  height:1945px;
+  height:1965px;
   border:3px solid blue;
   padding:20px;
   background-color:yellow;
@@ -27,13 +27,13 @@ p{
   width:605px;
   border:3px solid blue;
   padding:20px;
-  height:1945px;
+  height:1965px;
   background-color:lightgreen;
   font-size:15px;
 }
 footer{
   position:absolute;
-  top:2190px;
+  top:2210px;
   border:3px solid blue;
   height:30px;
   width: 960px;
