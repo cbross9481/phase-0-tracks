@@ -1,8 +1,8 @@
 puts "How many employees will be processed?"
 employees=gets.chomp
 employees=employees.to_i 
-x=1 
-while x<=employees
+y = 1 
+while y <= employees
 puts "What is  your name?"
 name = gets.chomp
 if name=="Drake Cula" || name=="Tu Fang" || name=="drake cula" || name=="tu fang"
@@ -12,7 +12,7 @@ else
 	  case1=false
 	  puts "case1 = false"
 end
-puts "How old are you? Where were you born?"
+puts "How old are you? What year were you born?"
 age = gets.chomp
 age = age.to_i
 year = gets.chomp
@@ -49,14 +49,30 @@ else
 	result2="Doesn't want health insurance"
 end 
 
-if case1 == false && case2 == true && (case3==true || case4==true)
-	result3= "Probably not  a vampire"
-elsif case1==false && case2 == false && case3==false && case4==false
-	result3= "Almost certainly a vampire"
-elsif case1==false && case2 == false && (case3==false || case4==false)
-	result3= "Probably a vampire"
-elsif case1==true
+loop = true
+puts "Please list any allergies below: "
+while  loop
+x=gets.chomp
+if x=="sunshine" || x== "Sunshine"
+case5=true
+puts "case5 = true"
+loop = false
+elsif x=="done"
+loop = false
+case5 = false
+puts "case5 = false"
+end 
+end 
+if case1==true && (case5==true || case5==false)
 result3= "Certainly a vampire"
+elsif case5==true
+result3= "Probably a vampire"
+elsif case1 == false && case2 == true && (case3==true || case4==true) && case5==false
+	result3= "Probably not a vampire"
+elsif case1==false && case2 == false && case3==false && case4==false 
+	result3= "Almost certainly a vampire"
+elsif case1==false && case2 == false && (case3==false || case4==false) 
+	result3= "Probably a vampire"
 else 
 	result3= "Results inconclusive"
 end 
@@ -64,11 +80,14 @@ end
 puts " "
 puts " "
 puts "Name: #{name}"
-puts "age: #{age}"
+puts "Age: #{age}"
+puts "Year: #{year}"
 puts "#{result1}"
 puts "#{result2}"
 puts "#{result3}"
 puts " "
 puts " "
-x=x+1 
+y=y+1
 end 
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends"
