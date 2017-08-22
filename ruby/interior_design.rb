@@ -6,18 +6,7 @@ age=age.to_i
 puts "How many children does the client have?"
 children=gets.chomp
 children=children.to_i
-puts "What is the decor theme?"
-theme=gets.chomp
-puts "How many bedrooms would you like decorated"
-bedroom=gets.chomp
-bedroom=bedroom.to_i
-puts "What is the color theme?"
-color=gets.chomp
-puts "What is the total square foot of your bedrooms"
-size=gets.chomp
-size=size.to_f
-
-interior = {
+puts "What is the decor theme?"`
   
   :name => name,
   :age => age,

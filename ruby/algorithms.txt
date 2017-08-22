@@ -1,0 +1,52 @@
+Event 1:
+Assign floor you are currently on to departing floor
+Assign floor you wish to go to destination floor X
+Up_Arrow: If departing floor < destination floor X, press the up arrow and enter elevator upon arrival
+Down_Arrow: If departing floor > destination floor X, press the down arrow and enter elevator upon arrival
+
+Event 2: 
+To reach destination floor X, press corresponding button in elevator
+
+Event3:
+For Up_Arrow{
+If arrived floor reached (new_arrival) < destination floor X, new passenger will enter and push for floor Y
+Assign new passenger to Arrival_1, Assign floor Y to Destination_1, increase passenger count +1
+If no value is entered for floor Y, unassign Arrival_X, unassign Destination_X and decrease passenger count -1 (assume this is a destination floor only and no new passenger has entered)
+Repeat for each new_arrival < destination floor X, assign new passenger by Arrival_(X+1) & assign new buttonY by Destination_(X+1)
+
+Note: Due to the nature of elevator travel, new_arrival will never be less than departing floor nor greater than destination floor X for Up_Arrow
+}
+For Down_Arrow{
+If arrived floor reached (new_arrival) > destination floor X, new passenger will enter and push for floor Y
+Assign new passenger to Arrival_1, Assign floor Y to Destination_1, increase passenger count +1
+If no value is entered for floor Y, unassign Arrival_X, unassign Destination_X and decrease passenger count -1 (assume this is a destination floor only and no new passenger has entered)
+
+Note: Due to the nature of elevator travel, new_arrival will never be greater than departing floor nor less than destination floor X for Down_Arrow
+
+Event 4:
+If new_arrival = destination floor X, exit elevator
+If new_arrival = Destination_X, say "Good Bye", decrease passenger count -1
+
+
+}
+Repeat for each new_arrival > destination floor X, assign new passenger by Arrival_(X+1) & assign new buttonY by Destination_(X+1)
+
+Event 5
+If passenger count upon exiting > 0, say "Have a great day"
+
+Scenario 1
+Event 1a: Assign current floor 1 to departing floor, assign floor 7 to destination floor 7
+Event 1b: departing floor 1 < destination floor 7= press the up arrow & enter elevator upon arrival
+Event 2: To reach destination floor 7, press button 7 in elevator
+Event 3a: new_arrival at floor 3 < destination floor 7, pushes for floor 6
+Event 3b: Assign Arrival_1, floor 6 = Destination_1, total passenger count = 1
+Event 3c: new_arrival at floor 5 < destination floor 7, pushes for floor 8
+Event 3d: Assign Arrival_2, floor 8 = Destination_2, total passenger count = 2
+Event 3e: new_arrival at floor 6 < destination floor 7, NoValue for button Y
+Event 3f: Assign Arrival_3, NoValue = Destination_3, total passenger count = 3
+Event 3g: Unassign Arrival_3, Unassign Destination_3, total passenger count = 2
+Event 4: new_arrival = Destination_1
+Event 4b:"Good Bye", total passenger count = 1,
+Event 4c: new_arrival at floor 7 = destination floor 7 
+Event 4d: Exit elevator
+Event 5: Passenger count = 1, "Have a great day"
