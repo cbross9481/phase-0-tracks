@@ -1,16 +1,19 @@
-header{
+header {
   border:3px solid blue;
   width:960px;
   padding:20px;
   background-color:lightblue;
   background-image:url(gps/octotat.jpg);
+} 
+
+h1 {
+  font-family:"Comic Sans MS";
 }
-h1{
-  font-family:Comic Sans MS;
+
+p {
+  font-family:"Comic Sans MS";
 }
-p{
-  font-family:Comic Sans MS;
-}
+
 .column-1{
   font-size:14px;
   position:relative;
@@ -21,6 +24,7 @@ p{
   padding:20px;
   background-color:yellow;
 }
+
 .column-2{
   position:relative;
   float:left;
@@ -31,6 +35,7 @@ p{
   background-color:lightgreen;
   font-size:15px;
 }
+
 footer{
   position:absolute;
   top:2210px;
