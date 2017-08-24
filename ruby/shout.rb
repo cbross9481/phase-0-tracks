@@ -1,11 +1,18 @@
 module Shout
-  def self.yell_angrily(words)
-    words + "!!!" + " :("
-  end
-  def self.yelling_happily(words)
-    words + "!!!" + " :)"
-  end
+   def shouting_word (word)
+     puts "#{word} ~Said with huge intensity~"
+   end 
 end
 
-p Shout.yell_angrily("No Way")
-p Shout.yelling_happily("Yes Way")
+class Parents
+	include Shout
+end 
+class Spouse
+	include Shout
+end 
+
+parents=Parents.new
+p parents.shouting_word ("Come back!")
+
+wife=Spouse.new
+p wife.shouting_word ("I love you!")
