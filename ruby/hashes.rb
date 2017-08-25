@@ -64,3 +64,11 @@ if interior[:size] == "none"
   interior[:size]=size
 end 
 p interior
+
+i=0 
+new_array = []
+while i<array.length 
+    new_array << array[i].number 
+  i+=1 
+  p new_array
+end 
