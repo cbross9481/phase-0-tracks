@@ -1,0 +1,45 @@
+Release 2)
+
+1.  SELECT * FROM hero;
+	1|Soldier76|male|55|1
+	2|Mercy|female|42|4
+	3|Hanzo|male|47|defensive
+	4|D.VA|female|26|Tank
+
+2. UPDATE hero SET age = 50 WHERE gender = "male";
+	sqlite> SELECT * FROM hero;
+	1|Soldier76|male|50|1
+	2|Mercy|female|42|4
+	3|Hanzo|male|50|2
+	4|D.VA|female|26|3
+
+3. SELECT * FROM hero,role WHERE hero.role_id = role.id;
+	1|Soldier76|male|55|1|1|offensive
+	2|Mercy|female|42|4|4|support
+	3|Hanzo|male|47|2|2|defensive
+	4|D.VA|female|26|3|3|tank
+
+4. SELECT hero.name, hero.gender, hero.age, role.role FROM hero JOIN role on hero.role_id = role.id;
+	Soldier76|male|55|offensive
+	Mercy|female|42|support
+	Hanzo|male|47|defensive
+	D.VA|female|26|tank
+
+5. DELETE FROM hero WHERE hero.role_id = 2;
+	sqlite> SELECT * FROM hero;
+	1|Soldier76|male|50|1
+	2|Mercy|female|42|4
+	4|D.VA|female|26|3
+
+6. sqlite> SELECT name, school FROM students CROSS JOIN universities ORDER BY school;
+	james|Dartmouth
+	brittany|Dartmouth
+	Marcus|Dartmouth
+	james|Washington
+	brittany|Washington
+	Marcus|Washington
+
+7. SELECT students.name, students.graduation_year, universities.school FROM students INNER JOIN universities on students.school_id = universities.id;
+	james|2019|Dartmouth
+	brittany|2018|Washington
+	Marcus|2020|Dartmouth
