@@ -105,5 +105,5 @@ respond = gets.chomp
   end
 
 db.execute("DELETE FROM portfolio WHERE project_name IS NULL") #Deletes blank rows
-p db.execute("SELECT * FROM portfolio")
+
 
