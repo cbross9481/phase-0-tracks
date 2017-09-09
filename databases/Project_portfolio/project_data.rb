@@ -61,7 +61,7 @@ def make_change(project,db)
     
     name = project[project.keys[1]]
     puts "#{project.keys[respond2]} = #{project[project.keys[respond2]]}"
-    db.execute("UPDATE portfolio SET #{project.keys[respond2]}='#{project[project.keys[respond2]]}' WHERE project_name='#{project[project.keys[1]]}'")
+    db.execute("UPDATE portfolio SET #{project.keys[respond2]}='#{project[project.keys[respond2]]}' WHERE id='#{project[project.keys[0]]}'")
   end 
 
 
@@ -105,5 +105,4 @@ respond = gets.chomp
   end
 
 db.execute("DELETE FROM portfolio WHERE project_name IS NULL") #Deletes blank rows
-
 
