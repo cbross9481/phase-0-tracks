@@ -22,3 +22,12 @@ The difference between GET and POST request
 	- POST requests does not allow data to be cached, parameters are generally in the body and used for updating data which potentially changes the server. Has not URL max length
 	- You would use a POST request when filling out an HTML form in web applications, and to make any required changes
 	- You would use a GET request when you want the server to perform the same action a number a times. You would use this request when displaying hompage content.
+
+Key Design philosophies of Linux Operating System
+	The linux philosophy gives the user the power to execute any (and all) command in which the operating system will execute. It doesn't assume the user does not know what it is trying to do, instead it relinquishes all output responsibility to the user. The idea is to allow the user the freedom and capability to explore newer and more creative ideas from the command line, on the contrary to a graphic interface system (such as Windows) which provides more limited access and direcion, linux allows the user the free capability to decide.
+	- Small is beautiful (being able to make commands using CL)
+	- Each program does one thing well (user can execute a command/program and can be done to fullest extend)
+
+	Virtual Private Server (VPS)
+	- virtual machine sold on the internet (SAAS) as a service. The machine is cloud based and can be accessed from another machine in which they have the capabilities of installing almost any software running on the Operating System.
+	- Virtual servers allow you to host web content without having to use a physical server or your own machine. Virtual servers are easily destructive in the case data is corrupted or lost. It is easily accessible and can be managed over the web.
